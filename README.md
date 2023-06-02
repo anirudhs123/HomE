@@ -11,7 +11,7 @@ future while also obtaining an accuracy of 91.2% for pedestrian action (cross vs
 not-cross) classification
 
 <p align="center">
-   <img src="Images/Fig1.png" width=300 height=300>
+   <img src="Images/Fig1.png" width=500 height=300>
 </p>
 
 ## Key Contributions
