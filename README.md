@@ -26,5 +26,5 @@ CIFAR-10 dataset, achieving SOTA.
 
 ## People
 
-This work has been developed by [Anirudh Sriram](https://github.com/anirudhs123), Prof.Ehsan Adeli, Prof.Jiajun Wu, Prof.Juan Carlos Niebles and Prof.Fei-Fei Li from Stanford University along with Dr. Adrien Gaidon from Toyota Research Institute (TRI).
+This work has been developed by [Anirudh Sriram](https://github.com/anirudhs123), Prof. Ehsan Adeli, Prof. Jiajun Wu, Prof. Juan Carlos Niebles and Prof. Fei-Fei Li from Stanford University along with Dr. Adrien Gaidon from Toyota Research Institute (TRI).
 
