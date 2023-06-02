@@ -1,22 +1,30 @@
-# HomE
-HomE: Homography-Equivariant Video Representation Learning
-# A-hybrid-deep-transfer-learning-strategy-for-thermal-comfort-prediction-in-buildings
-This work entails the usage of a novel hybrid deep transfer learning method for thermal comfort prediction in buildings with no or very little labelled data. We provide a novel Deep Learning architecture that jointly uses CNNs and LSTMs and the concept of Knowledge transfer from source to target domain to accurately predict the thermal comfort in low resourced buildings. We perform extensive ablation study and comparative anlaysis with other state of the art models and out perform them in various quality metrics. For detailed information regarding this work, please visit [our publication](https://www.sciencedirect.com/science/article/abs/pii/S0360132321005345). 
+# HomE: Homography-Equivariant Video Representation Learning
+
+Recent advances in self-supervised representation learning have enabled more efficient and robust model performance without relying on extensive labeled data. However, most works are still focused on images, with few working on videos and even fewer on multi-view videos, where more powerful inductive biases can be leveraged for self-supervision. In this work, we propose a novel method for representation learning of multi-view videos, where we explicitly model the representation space to maintain Homography Equivariance (HomE). Our method learns an implicit mapping between different views, culminating in a representation
+space that maintains the homography relationship between neighboring views. We
+evaluate our HomE representation via action recognition and pedestrian intent
+prediction as downstream tasks. On action classification, our method obtains
+96.4% 3-fold accuracy on the UCF101 dataset, better than most state-of-the-art
+self-supervised learning methods. Similarly, on the STIP dataset, we outperform
+the state-of-the-art by 6% for pedestrian intent prediction one second into the
+future while also obtaining an accuracy of 91.2% for pedestrian action (cross vs.
+not-cross) classification
 
 <p align="center">
-   <img src="images/Model_arch.jpg" width=500 height=500>
+   <img src="Images/Fig1.png" width=500 height=500>
 </p>
 
 ## Key Contributions
-1. A transfer learning based CNN-LSTM (TL CNN-LSTM) model is presented for accurate thermal comfort prediction in buildings with limited modeling data across different climate zones. In the design of TL CNN-LSTM, two significant challenges such as the identification of significant TCPs and imbalanced nature of the data were addressed.
-2. The developed model takes input of personal, indoor and outdoor features from the source datasets in specific order and captures the spatio temporal relations for accurate thermal comfort modeling.
-3. Extensive experiments on ASHRAE RP-884, Scales project, and Medium US office datasets show that TL CNN-LSTM outperforms the state of-the-art thermal comfort algorithms in terms of various quality metrics (Accuracy, ROC-AUC Score, Mathews Correlation Coefficient)).
-4. The studies on the impact of significant TCPs and their different combinations on thermal comfort modeling indicate that TL CNN-LSTM achieves best prediction performance with nine TCPs (PMV, personal, and outdoor environmental factors).
-5. The experiments on analyzing the impact of (i) CNN and LSTM layers on TL CNN-LSTM, (ii) CNN-LSTM layers for parameter transfer, and (iii) size of the target dataset on TL CNN-LSTM and CNN-LSTM demonstrates the effectiveness and applicability of the proposed transductive transfer learning based thermal comfort model for buildings with limited modeling data.
-
-Link to paper: https://www.sciencedirect.com/science/article/abs/pii/S0360132321005345
+Our contributions in this paper are threefold. First, we propose a simple and efficient representation learning technique that learns a vector space preserving the spatial structure between input views and
+learned representations. Unlike other multi-view representation learning methods, we do not align
+the representations of different views, we rather learn representations that are related to one another
+through their Homography matrices. Second, we also develop a neural network model consisting
+of an encoder, vector neuron layers, and a decoder network to assist the learning. Third, we
+improve the performance on pedestrian intent prediction on the STIP dataset. We further validate our
+algorithm for action classification on the UCF-101 dataset and image classification on the synthetic
+CIFAR-10 dataset, achieving SOTA.
 
 ## People
 
-This work has been developed by [Anirudh Sriram](https://github.com/anirudhs123), [Dr. Nivethitha Somu ](https://scholar.google.com/citations?user=q1M0BgIAAAAJ&hl=en), [Prof. Anupama Kowli](https://www.ee.iitb.ac.in/web/people/faculty/home/anu) and [Prof.Krithi Ramamritham ](https://www.iitb.ac.in/en/employee/prof-krithi-ramamritham) from Indian Institute of Technology, Madras and Indian Institute of Technology, Bombay. Ask us your questions at [anirudhsriram30799@gmail.com](mailto:anirudhsriram30799@gmail.com).
+This work has been developed by [Anirudh Sriram](https://github.com/anirudhs123), Prof.Ehsan Adeli, Prof.Jiajun Wu, Prof.Juan Carlos Niebles and Prof.Fei-Fei Li from Stanford University along with Dr. Adrien Gaidon from Toyota Research Institute (TRI).
 
